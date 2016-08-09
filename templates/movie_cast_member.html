@@ -1,0 +1,11 @@
+<div ng-click='$ctrl.select()' class="cast">
+    <div style="background-image: url('{{ $ctrl.profilePhotoPath(66) }}');float:left;" class="photo" ng-class="{selected: $ctrl.selected}"></div>
+    <div class="cast-data" ng-class="{'text-selected': $ctrl.selected}">
+        <h2 ng-class="{'text-selected': $ctrl.selected}">
+            {{$ctrl.member.name}}
+        </h2>
+        <div>
+            {{$ctrl.member.character}}
+        </div>
+    </div>
+</div>

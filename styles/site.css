@@ -1,0 +1,75 @@
+body {
+  font-family: Helvetica;
+  font-size: 14px;
+  color: #484949;
+  line-height: 18px; }
+
+h1 {
+  padding: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 24px;
+  color: #1A9DBA;
+  border: 0 solid #484949;
+  border-bottom-width: 1px; }
+
+.cast {
+  width: 100%;
+  overflow: auto;
+  display: inline-bock;
+  float: left; }
+  .cast .cast-data {
+    vertical-align: center;
+    display: inline; }
+  .cast .photo {
+    display: inline-block;
+    width: 66px;
+    height: 66px;
+    margin: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    background-position: center center;
+    background-size: cover; }
+    .cast .photo.selected {
+      border: 5px solid #1A9DBA; }
+
+.now-playing {
+  float: left; }
+  .now-playing .poster {
+    display: inline-block;
+    width: 122px;
+    height: 122px;
+    margin: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    border: 9px solid transparent;
+    background-position: center center;
+    background-size: cover; }
+    .now-playing .poster.selected {
+      border: 9px solid #1A9DBA; }
+
+.movie-info .cast-list {
+  max-height: 400px;
+  overflow: scroll; }
+.movie-info .poster {
+  width: 174px;
+  height: 262px; }
+.movie-info .selected-cast-photo {
+  width: 347px;
+  height: 420px; }
+
+.text-selected {
+  color: #1A9DBA; }
+
+h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  color: #484949; }
+
+/*# sourceMappingURL=site.css.map */

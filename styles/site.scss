@@ -1,0 +1,81 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin photo_circle ($dim,$border) {
+    display: inline-block;
+    width: $dim;
+    height: $dim;
+    margin: 5px;
+    @include border-radius(50%);
+    border: $border solid transparent;
+    background-position: center center;
+    background-size: cover;
+    &.selected {
+            border: $border solid #1A9DBA;
+    }
+
+}
+body {
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #484949;
+    line-height: 18px;
+}
+h1 {
+    padding: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    color: #1A9DBA;
+    border: 0 solid #484949;
+    border-bottom-width: 1px;
+}
+.cast {
+    width: 100%;
+    overflow: auto;
+    display: inline-bock;
+    float: left;
+    .cast-data {
+        vertical-align: center;
+        display: inline;
+    }
+    .cast-member-name {}
+    .photo {
+        @include photo_circle(66px,5px)
+    }
+}
+.now-playing {
+    float: left;
+    .poster {
+        @include photo_circle(122px,9px);
+    }
+}
+.movie-info {
+    .cast-list {
+        max-height: 400px;
+        overflow: scroll;
+    }
+    .poster {
+        width: 174px;
+        height: 262px;
+    }
+    .selected-cast-photo {
+        width: 347px;
+        height: 420px;
+    }
+}
+.text-selected {
+    color: #1A9DBA;
+}
+//.profile-photo.selected {
+//    border: 5px solid #1A9DBA;
+//}
+h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    color: #484949;
+}

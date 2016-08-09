@@ -1,0 +1,4 @@
+<div  ng-click='$ctrl.select(movie.id)' class="now-playing">
+    <div style="background-image: url('{{ $ctrl.posterPath(122) }}');" class="poster" ng-class="{selected: $ctrl.selected}"></div>
+    <h2>{{$ctrl.movie.title}}</h2>
+</div>

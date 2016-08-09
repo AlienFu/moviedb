@@ -1,0 +1,25 @@
+<html ng-app="MovieDBApp">
+    <head>
+        <script src="scripts/angular.js"></script>
+        <script src="scripts/angular-resource.min.js"></script>
+        <script src="scripts/angular-route.min.js"></script>
+        <script src="scripts/app.js"></script>
+        <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/styles/site.css">
+    </head>
+    <body ng-controller="MainController">
+        <div class='container-fluid'>
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>Browse Movies</h1>
+                    <now_playing></now_playing>
+                </div>
+                <div class="col-md-8">
+                    <div ng-view>
+                        <movie_info></movie_info>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

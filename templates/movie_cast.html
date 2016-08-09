@@ -1,0 +1,12 @@
+<div class="container movie-info">
+    <div class="row">
+        <div class="col-md-6 cast-list" >
+                    <movie-cast-member ng-repeat="member in $ctrl.cast" member="member"></movie-cast-member>
+
+        </div>
+        <div class="col-md-6">
+            <div style="background-image: url('{{ $ctrl.selectedCastPhoto(185) }}');" class="selected-cast-photo"></div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container movie-info">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{$ctrl.movie_info.title}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <img class="poster" ng-src="{{$ctrl.posterPath(174)}}"/>
+        </div>
+        <div class="col-md-9">
+            <h2>WHO MADE IT?</h2>
+            <div>
+                <span>Director</span>
+                <span>{{$ctrl.movie_credits.crew_by_job.Director|listBy: 'name' : ', ' }}</span>
+            </div>
+            <div>
+                <span>Writers</span>
+                <span>{{$ctrl.movie_credits.crew_by_job.Writer|listBy: 'name' : ', ' }}</span>
+            </div>
+            <div>
+                <span>Stars</span>
+                <span>{{$ctrl.movie_credits.cast|listBy: 'name' : ', ' : 4}}</span>
+            </div>
+            <h2>WHATS IT ABOUT?</h2>
+            <div>
+                {{$ctrl.movie_info.overview}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>MOVIE CREDITS</h1>
+        </div>
+    </div>    
+    <movie_cast ng-if="($ctrl.movie_info.id)" movie-id="$ctrl.movie_info.id"></movie_cast>
+</div>
